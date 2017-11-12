@@ -1,10 +1,9 @@
 package:
   name: rdkit
-  version: "__conda_version__"
+  version: 2017.09.1
 
 source:
-  git_url: https://github.com/rdkit/rdkit.git
-  git_rev: Release_2017_09
+  path: ../../rdkit
   patches:
     - rdpaths.patch
     - rdconfig.patch [win]
@@ -14,10 +13,10 @@ build:
 
 requirements:
   build:
-    - conda ==4.3.25
+    - conda >=4.3.25
     - cmake
     - requests
-    - boost ==1.63.0 [unix]
+    - boost >=1.63.0 [unix]
     - boost ==1.56.0 [win and py27]
     - boost ==1.59.0 [win and py35]
     - boost ==1.59.0 [win and py36]
@@ -28,11 +27,11 @@ requirements:
     - nox [unix]
     - cairo [unix]
     - pkg-config [unix]
-    - eigen
+    - eigen >=3.3.3
     - pandas
     - m2-patch [win]
   run:
-    - boost ==1.63.0 [unix]
+    - boost >=1.63.0 [unix]
     - boost ==1.56.0 [win and py27]
     - boost ==1.59.0 [win and py35]
     - boost ==1.59.0 [win and py36]

@@ -1,4 +1,4 @@
-{% set version = "3.2.8" %}
+{% set version = "3.3.3" %}
 
 package:
   name: eigen
@@ -7,10 +7,10 @@ package:
 source:
   fn: eigen-{{ version }}.tar.gz
   url: http://bitbucket.org/eigen/eigen/get/{{ version }}.tar.gz
-  sha1: 574b0732f7e04ecfa91597afb2f69bc44f3387e6
+  sha1: bd83b6a789ce73920e6b136663b38ab335b11f7a
 
 build:
-  number: 2
+  number: 1
 
 requirements:
   build:
